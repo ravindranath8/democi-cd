@@ -1,10 +1,9 @@
 import pandas as pd
-import os
 
-def process_sales_data(input_path="sales_data.csv", output_path="sales_summary.csv"):
-    if not os.path.exists(input_path):
-        raise FileNotFoundError(f"Input CSV not found: {input_path}")
-
+def process_sales_data(
+    input_path="https://raw.githubusercontent.com/ravindranath8/democi-cd/main/your-repo/sales_data.csv",
+    output_path="sales_summary.csv"
+):
     df = pd.read_csv(input_path)
 
     # Basic cleaning / processing
